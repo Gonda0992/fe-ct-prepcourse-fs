@@ -1,5 +1,5 @@
 ![HenryLogo](../Assets//logoBannerHenry.png)
-
+git log
 # **HOMEWORK 03 | JAVASCRIPT I**
 
 ## **✅ TESTING**

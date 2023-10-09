@@ -7,26 +7,39 @@ function esPositivo(num) {
    // Si el número es positivo ---> "Es positivo".
    // Si el número es negativo ---> "Es negativo".
    // Si el número es 0, devuelve false.
-   // Tu código:
+   if(num > 0){
+      return `Es positivo`;
+   } else if (num < 0) {
+      return `Es negativo`;
+   } else {
+      return false
+   }
 }
+esPositivo(1);
 
 function agregarSimboloExclamacion(str) {
    // Agrega un símbolo de exclamación al final del string "str" y retórnalo
    // Ejemplo: "hello world" ---> "hello world!"
-   // Tu código:
+   let simbolo = "!";
+   return `${str}!`;
 }
+agregarSimboloExclamacion("hello world");
 
 function combinarNombres(nombre, apellido) {
    // Retorna "nombre" y "apellido" combinados en un mismo string pero separados por un espacio.
    // Ejemplo: ("Soy", "Henry") ---> "Soy Henry"
-   // Tu código:
+   nombre;
+   apellido;
+   return `El alumno se llama ${nombre} ${apellido}`
 }
+combinarNombres("Sebastian","Montesinos")
 
 function obtenerSaludo(nombre) {
    // Toma el string "nombre" y concatena otra string en la cadena para que tome la siguiente forma:
    // Ejemplo: "Martin" ---> "Hola Martin!"
-   // Tu código:
+   return `Hola ${nombre}!`
 }
+obtenerSaludo("Miguel Angelo")
 
 function obtenerAreaRectangulo(alto, ancho) {
    // Retornar el área de un rectángulo teniendo su altura y ancho.
@@ -54,8 +67,9 @@ function esVocal(letra) {
    // Escribe una función que reciba una letra y, si es una vocal, muestre el mensaje “Es vocal”.
    // Si el usuario ingresa un string de más de un caracter debes retornar el mensaje: "Dato incorrecto".
    // Si no es vocal, tambien debe retornar "Dato incorrecto".
-   // Tu código:
+   
 }
+esVocal();
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
 module.exports = {
