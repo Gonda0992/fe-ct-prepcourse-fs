@@ -43,33 +43,49 @@ obtenerSaludo("Miguel Angelo")
 
 function obtenerAreaRectangulo(alto, ancho) {
    // Retornar el área de un rectángulo teniendo su altura y ancho.
-   // Tu código:
+   let area = alto * ancho;
+   return `El area de un rectangulo es ${area}`;
+
 }
+obtenerAreaRectangulo(5,10);
 
 function retornarPerimetro(lado) {
    // La función recibe como argumento la medida de un lado de un cuadrado.
    // Debes retornar su perímetro.
-   // Tu código:
+   let perimetro = lado * 4;
+   return `El perimetro del cuadrado es ${perimetro}`;
 }
+retornarPerimetro(4);
 
 function areaDelTriangulo(base, altura) {
    // Calcula el área de un triángulo y retorna el resultado.
-   // Tu código:
+   let areaTriangulo = ((base * altura) / 2);
+   return `El area del triangulo es ${areaTriangulo}`;
 }
+areaDelTriangulo(10,5);
 
 function deEuroAdolar(euro) {
    // Supongamos que 1 euro equivale a 1.20 dólares.
    // Debes calcular el valor recibido como argumento pasándolo a dolares.
-   // Tu código:
+   let tipoDeCambio = 1.2;
+   let operacion = euro * tipoDeCambio;
+   return `${euro} euro(s) que ingresaste equivale a ${operacion} dolares`;
 }
+deEuroAdolar(10);
 
 function esVocal(letra) {
    // Escribe una función que reciba una letra y, si es una vocal, muestre el mensaje “Es vocal”.
    // Si el usuario ingresa un string de más de un caracter debes retornar el mensaje: "Dato incorrecto".
    // Si no es vocal, tambien debe retornar "Dato incorrecto".
-   
+   if(letra.length > 1){
+      console.log(`ingreso una palabra ó mas de 1 letra`);
+   } else if (letra !== "a" && letra !== "e" && letra !== "i" && letra !== "o" && letra !== "u"){
+      console.log(`ingreso una letra del abecedario`);
+   } else {
+      console.log(`Es vocal`)
+   }
 }
-esVocal();
+esVocal("a");
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
 module.exports = {
