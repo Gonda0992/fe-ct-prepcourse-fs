@@ -7,37 +7,37 @@ function elevarAlCuadrado(num) {
    // Retorna el valor de "num" elevado al cuadrado.
    return Math.pow(num,2)
 }
-elevarAlCuadrado(4);
+// elevarAlCuadrado(4);
 
 function elevarAlCubo(num) {
    // Retorna el valor de "num" elevado al cubo.
    return Math.pow(num,3)
 }
-elevarAlCubo(3);
+// elevarAlCubo(3);
 
 function elevar(num, exponent) {
    // Retorna el valor de "num" elevado al exponente "exponent".
    return Math.pow(num, exponent);
 }
-elevar(2,10);
+// elevar(2,10);
 
 function redondearNumero(num) {
    // Redondea "num" al entero más próximo y retórnalo.
    return Math.round(num);
 }
-redondearNumero(4.5)
+// redondearNumero(4.5)
 
 function redondearHaciaArriba(num) {
    // Redondea "num" hacia arriba y retórnalo.
    return Math.ceil(num);
 }
-redondearHaciaArriba(7.123);
+// redondearHaciaArriba(7.123);
 
 function numeroRandom() {
    // Genera un número al azar entre 0 y 1 y retórnalo.
    return Math.random()
 }
-numeroRandom();
+// numeroRandom();
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
 module.exports = {

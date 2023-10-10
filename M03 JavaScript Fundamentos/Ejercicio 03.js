@@ -10,7 +10,6 @@ function sonIguales(x, y) {
       return false
    }
 }
-sonIguales(4,4)
 
 function tienenMismaLongitud(str1, str2) {
    // Retorna true si los dos strings tienen la misma longitud.
@@ -21,7 +20,6 @@ function tienenMismaLongitud(str1, str2) {
       return false;
    }
 }
-tienenMismaLongitud("papa","mama")
 
 function menosQueNoventa(num) {
    // Retorna true si el argumento "num" es menor que noventa.
@@ -32,7 +30,6 @@ function menosQueNoventa(num) {
       return false;
    }
 }
-menosQueNoventa(50);
 
 function mayorQueCincuenta(num) {
    // Retorna true si el argumento "num" es mayor que cincuenta.
@@ -43,7 +40,6 @@ function mayorQueCincuenta(num) {
       return false;
    }
 }
-mayorQueCincuenta(100);
 
 function esPar(num) {
    // Retorna true si "num" es par.
@@ -54,7 +50,7 @@ function esPar(num) {
       return false;
    }
 }
-esPar(4);
+
 
 function esImpar(num) {
    // Retorna true si "num" es impar.
@@ -65,7 +61,7 @@ function esImpar(num) {
       return false;
    }
 }
-esImpar(5);
+
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
 module.exports = {
