@@ -33,8 +33,13 @@ console.log(longitudDelArray);
 function incrementarPorUno(array) {
    // El arreglo recibido por parámetro contiene números.
    // Retornar un arreglo con los elementos incrementados en +1.
-
-}
+   return array.map(function (e) {
+      return e + 1;
+   })
+ }
+let arrayOriginal = [1,2,3,4,5];
+let resultadoFinal = incrementarPorUno(arrayOriginal);
+console.log(resultadoFinal);
 
 function agregarItemAlFinalDelArray(array, elemento) {
    // Agrega el "elemento" al final del arreglo recibido.
@@ -76,7 +81,7 @@ function arrayContiene(array, elemento) {
 let frutas = ["pera","manzana","frejol"];
 let buscar = arrayContiene(frutas,'pera');
 console.log(buscar);
-
+/*
 function agregarNumeros(arrayOfNums) {
    // El parámetro "arrayOfNums" debe ser un arreglo de números.
    // Suma todos los elementos y retorna el resultado.
@@ -88,26 +93,62 @@ function agregarNumeros(arrayOfNums) {
 }
 let arrayOfNums = [1,2,3,4];
 let sumarValores = agregarNumeros(arrayOfNums);
-console.log(sumarValores);
+console.log(sumarValores);*/
+
+/*otra manera de resolver el ejercicio de arriba seria usando el metodo .reduce()*/
+function agregarNumeros(arrayOfNums) {
+   // El parámetro "arrayOfNums" debe ser un arreglo de números.
+   // Suma todos los elementos y retorna el resultado.
+   let resultado = arrayOfNums.reduce((acumulador,elemento)=> acumulador + elemento,0);
+   return resultado;
+}
+arrayOfNums = [1,2,3,4,5];
+let result = agregarNumeros(arrayOfNums);
+console.log(result);   
 
 function promedioResultadosTest(resultadosTest) {
    // El parámetro "resultadosTest" es un arreglo de números.
    // Itera (en un bucle) los elementos del arreglo y devuelve el promedio de las notas.
-   // Tu código:
+   let suma = 0;
+   for(i=0; i<resultadosTest.length; i++ ){
+      suma = suma + resultadosTest[i];
+   }
+   let promedio = suma / resultadosTest.length;
+   return promedio;
 }
+resultadosTest = [10,15,12,18,20];
+let resultadoPromedio = promedioResultadosTest(resultadosTest);
+console.log(resultadoPromedio);
+
 
 function numeroMasGrande(arrayOfNums) {
    // El parámetro "arrayOfNums" es un arreglo de números.
    // Retornar el número más grande.
-   // Tu código:
+      return Math.max(...arrayOfNums)
 }
+arrayOfNums = [12,43,2,54,6,76];
+console.log(numeroMasGrande(arrayOfNums));
 
-function multiplicarArgumentos() {
+
+function multiplicarArgumentos(arguments) {
    // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto.
    // Si no se pasan argumentos retorna 0. Si se pasa un argumento, simplemente retórnalo.
    // [PISTA]: "arguments" es un arreglo.
-   // Tu código:
+   //arguments.length***
+   if(arguments.length > 1){
+      let resultado = arguments.reduce(function(producto, numero){
+         return producto * numero
+      },1)
+      return resultado;
+   } else if (arguments.length == 1){
+      return arguments * 1;
+   }else {
+      return 0
+   }
 }
+arguments = [2,4,6];
+console.log(multiplicarArgumentos(arguments));
+
 
 function cuentoElementos(array) {
    // Desarrolla una función que retorne la cantidad de elementos del arreglo cuyo valor sea mayor que 18.
@@ -149,9 +190,33 @@ function tablaDelSeis() {
 function mayorACien(array) {
    // La función recibe un arreglo con enteros entre 0 y 200.
    // Recorrerlo y retornar un arreglo con todos los valores mayores a 100 (no incluye el 100).
-   // Tu código:
-}
+      var mayoresACien = [];
+      for (var i = 0; i < array.length; i++) {
+        if (array[i] > 100) {
+          mayoresACien.push(array[i]);
+        }
+      }
+      return mayoresACien;
+    }
+    var arregloOriginal = [50, 120, 80, 150, 200, 90, 110];
+    var resultadofinal = mayorACien(arregloOriginal);
+    console.log(resultadofinal);
 
+//OTRA MANERA DE RESOLVER EL EJERCICIO
+/*function mayorACien(array) {
+   // La función recibe un arreglo con enteros entre 0 y 200.
+  // Recorrerlo y retornar un arreglo con todos los valores mayores a 100 (no incluye el 100).
+  let mayoresDeCien = [];
+  for(elemento of array){
+      if(elemento > 100){
+          mayoresDeCien.push(elemento);
+      }
+  }
+  return mayoresDeCien;
+}
+array = [0,1,101,50,200,150,10,155,160,190];
+let result = mayorACien(array);
+console.log(result);*/
 /* ----------------------------------------------------------------------------------
 💪 EXTRA CREDIT EXTRA CREDIT EXTRA CREDIT EXTRA CREDIT EXTRA CREDIT  EXTRA CREDIT 💪
 -------------------------------------------------------------------------------------*/
