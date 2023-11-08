@@ -312,11 +312,11 @@ function continueStatement(num) {
    // Cuando el número de iteraciones alcance el valor 5, no se suma ese caso y se continua con la siguiente iteración.
    // [PISTA]: utiliza el statement 'continue'.
    let arrayAcumulador = [];
-   for(i=0; i<10; i++){
-      num = num + 2;
-      if(i === 4){
+   for(let i=0; i<10; i++){
+      if(i == 5){
          continue;
       }
+      num = num + 2; 
       arrayAcumulador.push(num);
    }
    return arrayAcumulador;
