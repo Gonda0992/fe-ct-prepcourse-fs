@@ -82,13 +82,13 @@ console.log(nuevoObjeto);
 function tieneEmail(objetoUsuario) {
   // Verifica si el "objetoUsuario", en su propiedad "email", posee un valor definido.
   // En ese caso retornar true. Caso contrario, false.
-  if(objetoUsuario.email === null || objetoUsuario.email === undefined){
+  if(objetoUsuario.email === null || objetoUsuario.email === undefined || parseInt(objetoUsuario.email)){
     return false;
   } else {
     return true;
   }
 }
-const objetoUsuarioEmail = {email : 'john@email.com'}
+const objetoUsuarioEmail = {id : 1, email : 'john@email.com'}
 console.log(tieneEmail(objetoUsuarioEmail));
 
 function tienePropiedad(objeto, propiedad) {
